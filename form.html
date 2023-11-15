@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li>第一条列表</li>
+    <li>第二条列表</li>
+</ul>
+
+<br>
+
+测试有序列表
+<ol>
+    <li>有序列表第一条</li>
+    <li>有序列表第二条</li>
+</ol>
+
+<br>
+测试定义列表
+<dl>
+    <dt>第一个定义</dt>
+    <dd>第一个定义的选项一</dd>
+    <dd>第一个定义的第二个选项</dd>
+    <dt>第二个定义</dt>
+</dl>
+
+<br>
+测试表格
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>第一列</th>
+            <th>第二列</th>
+            <th>第三列</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>第一列的内容</td>
+            <td rowspan="2">第二列的内容</td>
+            <td>第三列的内容</td>
+        </tr>
+
+        <tr>
+            <td>第二列的内容</td>
+            <td>第三列的内容</td>
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">第二列的内容</td>
+        </tr>
+    </tfoot>
+</table>
+
+<br>
+测试表单标签
+<ul>
+    <li>测试文本框：<input type="text" placeholder="请输入文本"></li>
+    <li>测试密码框：<input type="password" placeholder="请输入密码"></li>
+    <li>测试单选框：
+        <input type="radio" name="gender" id="man" checked>
+        <label for="man">男</label>
+        <input type="radio" name="gender">女
+    </li>
+    <li>测试多选框:
+        <input type="checkbox" name="interest">跑步
+        <input type="checkbox" name="interest" checked>摸鱼
+        <input type="checkbox" name="interest" checked>睡觉
+    </li>
+    <li>测试上传文件:
+        <input type="file">
+        <input type="file" multiple>
+    </li>
+</ul>
+
+<br>
+测试下单菜单
+<select>
+    <option>睡觉</option>
+    <option selected>摸鱼</option>
+</select>
+
+<br>
+<textarea>
+    测试多行文本标签
+</textarea>
+
+<br>
+测试button功能，配合表单标签管理
+<form>
+    <input type="text"> 用户名
+    <input type="password"> 密码
+    <button type="reset">重置</button>
+</form>
+
+<br>
+特殊的字符显示：
+<ol>
+    <li>小于号 &lt;</li>
+    <li>大于号 &gt;</li>
+    <li>空格 &nbsp;</li>
+</ol>
+</body>
+</html>
