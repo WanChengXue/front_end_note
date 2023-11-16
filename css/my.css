@@ -1,8 +1,9 @@
 div {
-    color: red;
-    /* font-size: 20em; */
-    text-align:center;
-    font-size: 20px;
+    width: 288px;
+    height: 340px;
+    background-image: url(../imgs/cat.png);
+    background-color: #fff;
+    background-size: contain;
 }
 
 p.box{
@@ -38,6 +39,9 @@ p.box{
 
 div > span{
     color: yellow;
+    width: 30px;
+    height: 40px;
+    background-color: #fff;
 }
 
 a:hover{
