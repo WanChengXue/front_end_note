@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,4 +18,104 @@
 <p class="test-color test-size">
     测试类选择器
 </p>
+
+<br>
+
+<p id="test-id">
+    测试id选择器
+</p>
+
+
+<br>
+<div>
+    测试通配符选择器
+</div>
+
+<br>
+差异化设置盒子
+
+<div class="small-box"></div>
+
+<div class="big-box"></div>
+
+<br>
+测试文字属性
+<p style="font-size: 20px">文字尺寸测试</p>
+<p style="font-weight: bold">文字粗细测试</p>
+<p style="font-style:italic">文字倾斜测试</p>
+<p style="line-height: 2; text-indent: 2em">多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字多行文字</p>
+<div style="height: 100px; line-height:100px ;background-color: yellow">测试字体居中</div>
+<p style="font-family: sans-serif">测试文字的字体</p>
+<p style="font: italic bold 30px/2 sans-serif">设置font，网页初期设计使用</p>
+<p style="text-indent: 2em">测试文字缩进</p>
+<p style="text-align: center">测试文字居中</p>
+
+
+<br>
+测试图片居中
+
+<div style="text-align:center">
+<img src="./imgs/cat.png">
+</div>
+
+<br>测试下划线，删除线，上划线
+<ol>
+    <li sytle="text-decoration: none">无</li>
+    <li style="text-decoration: underline">下划线</li>
+    <li style="text-decoration: line-through">删除线</li>
+    <li style="text-decoration: overline">上顶</li>
+</ol>
+
+<h3>测试复合选择器</h3>
+<h4>测试后代选择器</h4>
+<div>
+    <span>
+        div内部的span选择器颜色变成黄色
+        <span>
+            再测试一下孙子的孙子
+        </span>
+    </span>
+
+    <p>
+        <span>
+            再测试一下p下面的span标签
+        </span>
+    </p>
+</div>
+<h4>测试子代选择器</h4>
+<div>
+    <span>
+        div下面的span
+    </span>
+    <div>
+        <span>div下面的div下面的span</span>
+    </div>
+</div>
+
+<h4>测试并集选择器</h4>
+<div>
+    div测试
+</div>
+<span>
+    span测试
+</span>
+<p>
+    p测试
+</p>
+
+<h4>交集选择器</h4>
+<p class="box">p标签，且有box类，颜色变成blue</p>
+
+<h4>伪类选择器</h4>
+<a href="./test.html" target="_blacked">测试跳转</a>
+
+<h3>css继承性测试</h3>
+<div>
+    <p>这是p标签</p>
+    <span>这是span标签</span>
+    <ol>
+        <li>这是ol标签</li>
+    </ol>
+</div>
+
 </html>
