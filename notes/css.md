@@ -148,3 +148,142 @@ css的简写大部分都是首字母的简写
 - 背景图固定， `background-attachment`，滚动之后，内容能够滚动，背景图不发生滚动，属性值fixed
 - 背景图复合属性，`background`，背景色 背景图 背景图平铺方式 背景图位置/背景图缩放
 ## 显示模式
+标签的显示方式，作用：布局网页的时候，根据标签的显示模式选择合适的标签拜访内容
+- 块级元素（div标签）
+  - 独占一行
+  - 宽度默认是父级的100%
+  - 添加宽高属性生效
+- 行内元素（span标签）
+  - 行内共存
+  - 尺寸由内容撑开，加宽高是不生效的
+- 行内块元素（img）
+  - 一行共存多个
+  - 默认尺寸和内容一样大，可以支持加宽高
+
+### 转换显示模式
+属性名，display，属性值：
+<table border='1'>
+<tr>
+<th><span style="font: italic bold 16px/2 kai; color: red">属性值</span></th>
+<th><span style="background: url(../imgs/cat.png)">效果</span></th
+</tr>
+<tr>
+<td>block</td>
+<td>块级</td
+</tr>
+<tr>
+<td>inline-block</td>
+<td>行内块</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>行内</td>
+</tr>
+</table>
+
+常用的两种属性是`block, inline-block`，
+
+
+## 选择器
+### 结构伪类选择器
+作用：根据元素的结构关系查找元素，写法：
+<table border="1">
+<tr><th>选择器</th> <th>说明</th></tr>
+<tr><td>E:first-child</td> <td>查找第一个E元素</td></tr>
+<tr><td>E:last-child</td> <td>查找最后一个E元素</td></tr>
+<tr><td>E:nth-child(N)</td> <td>查找第N个元素（第一个元素N值为1）</td></tr>
+<tr><td>E:nth-child(2n-1)</td> <td>查找所有的奇数</td></tr>
+</table>
+
+**E表示选择器的名字**
+
+### 伪元素选择器
+作用：创建虚拟元素（伪元素），用来摆放装饰性的内容
+<table border='1'>
+<tr><th>选择器</th> <th>说明</th></tr>
+<tr><td>E::before</td> <td>在E元素里面最前面添加一个伪元素</td></tr>
+<tr><td> E::after</td> <td>在E元素里面最后面添加一个伪元素</td></tr>
+</table>
+
+## PxCook软件
+倒入PSD文件，创建web项目，点击开发模式
+
+## 盒子模型
+作用：布局网页，摆放盒子和内容
+
+### 组成
+- 内容区域：width & height
+- 内边距：padding，出现在内容和盒子边缘之间
+- 边框线 border
+- 外边距 margin 出现在盒子外面
+
+#### 边框线
+border(bd),属性值：边框线粗细，线条样式，颜色（不区分顺序）
+常用的线条样式有：
+<table border="1">
+<tr><th>属性值</th> <th>线条样式</th></tr>
+<tr><td>dashed</td><td>虚线</td>/<tr>
+<tr><td>dotted</td> <td>点线</td></tr>
+</table>
+
+设置四个方向的border，border-top，border-right，border-left，border-bottom
+
+#### 内边距
+padding，和border一样，有padding，padding-top，padding-left，padding-right，padding-bottom，如果省略写法，使用多值写法
+- padding: 10px 20px 40px 80px，这种写法定义上右下左四个边距，顺时针
+- padding: 10px 20px 40px，这种写法上右下会变成10，20，40，左边会和右边一样
+- padding: 10px 20px，这种写法上下为10px，左右为20px
+
+
+#### 尺寸计算
+默认情况：盒子尺寸=内容尺寸+border尺寸+内边距尺寸
+<br>
+结论：给盒子加border/padding会撑大盒子<br>
+解决办法：
+- 手动做减法：减掉border/padding的尺寸，修改div的width和height
+- 内减：padding-size，border-size
+
+
+#### 外边距
+和padding一样，可以自己定义：margin-top，margin-right，margin-bottom，margin-left。同样，margin也有简写模式，使用一个margin，后面跟着四个值/三个值/两个值0
+
+**设置版心居中，左右margin设置auto即可**
+
+
+#### 清除默认样式
+清除标签默认的样式，比如：默认的内外标签，使用的方式：
+```
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+```
+#### 元素溢出
+控制溢出元素的内容的显示方式，属性名overflow，属性值：
+- hidden，溢出隐藏
+- scroll，溢出滚动（无论是否溢出，都显示滚动条位置）
+- auto，溢出滚动（溢出才显示滚动条的位置）
+
+
+#### 外边距问题，合并现象
+垂直排列的兄弟标签，A盒子的下标签和B盒子的上标签，A和B盒子之间的实际间距取决于A盒子下标签和B盒子上标签中较大的那个
+
+#### 外边距问题，塌陷问题
+父子级的标签，子级的添加上外边距会产生塌陷问题，会导致父级同时下移，解决办法：
+- 取消子级margin，父级设置padding
+- 父级设置overflow：hidden
+- 父级设置border-top
+
+#### 内外边距问题
+行内元素添加margin和padding，无法改变元素垂直位置
+
+#### 盒子外边框变成圆角
+使用`border-radius`，记忆方法，左上，右上，右下，左小，同样支持2，3，值写法，缺省的和对角一样
+<br>
+圆角：
+- 正圆形状，给正方形盒子设置圆角属性值为宽高的一半，或者百分之五十，用在img中，作为头像
+- 胶囊形状，给长方形盒子设置圆角属性值为高度的一半，或者百分之五十，作为按钮
+
+#### 盒子外边增加阴影属性
+使用属性box-shadow，`x轴偏移量 y轴偏移量 模糊半径 扩散半径 颜色 内外阴影`，x，y轴偏移量必须书写，默认使用外阴影，内阴影必须添加inset

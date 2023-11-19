@@ -1,9 +1,10 @@
 div {
     width: 288px;
     height: 340px;
-    background-image: url(../imgs/cat.png);
-    background-color: #fff;
-    background-size: contain;
+    /* background-image: url(../imgs/cat.png); */
+    /* background-color: #fff; */
+    /* background-size: contain; */
+    background: yellow url(../imgs/fox.png) no-repeat center/cover;
 }
 
 p.box{

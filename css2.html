@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:nth-child(2n-1) {
+            background-color: red;
+        }
+
+
+
+
+        div.test1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            border-top: 1px solid #000;
+            border-left: 5px dashed red;
+            border-right: 10px solid yellow;
+            border-bottom: 15px dotted green;
+        }
+
+        div.test2{
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+        }
+
+        div.test3{
+            padding:20px;
+            box-sizing: border-box;
+        }
+
+        div.test4{
+            height: 400px;
+            width: 1000px;
+            margin: 0px auto;
+            box-sizing: border-box;
+            background-color: green;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        div.test5{
+            width: 100px;
+            height: 100px;
+            /* box-sizing: border-box; */
+            overflow: auto;
+            background-color: pink;
+        }
+
+        div.test6{
+            width: 100px;
+            height: 100px;
+            border-radius: 10px 20px 30px 40px;
+            background-color: green;
+        }
+
+        div.test7{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            box-shadow: 2px 5px 10px 1px red;
+        }
+
+        div.father{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* padding: 25px; */
+            overflow: hidden;
+        }
+
+        div.son{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+<body></body>
+<ul>
+    <li>第一行</li>
+    <li>第二行</li>
+    <li>第三行</li>
+</ul>
+
+<div>
+    测试
+</div>
+
+
+<div class="test1">
+    border测试
+</div>
+
+<div class="test2">
+    padding测试
+</div>
+
+<div class="test3">
+    box-sizing: border-box测试
+</div>
+
+<div class="test4">
+    测试版心居中，一定要有宽度标签
+</div>
+
+<div class="test5">
+    长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本长文本
+</div>
+
+<div class="father">
+    <div class="son">
+        嵌套测试
+    </div>
+</div>
+
+<br>
+span行内标签测试 <br>
+<span style="margin:50px; padding:20px">测试一</span>
+<br>
+<span style="margin: 50px; padding: 20px; line-height: 2;">测试二</span>
+
+<div class="test6">
+    盒子测试
+</div>
+
+<div class="test7">
+    阴影测试
+</div>
+
+</body>
+</html>
