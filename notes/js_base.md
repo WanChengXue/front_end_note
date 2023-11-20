@@ -305,3 +305,54 @@ function(){}
 
 #### 9.4.4 转换为boolean型
 '', 0, underfined, null, false, NAN变成bool都是false，其余为true，`Boolean(x)`
+
+## 10. 对象(object)
+### 10.1 Javascript中的对象
+可以理解为一种无需的数据集合，其实就是python中的字典：
+```javascript
+let obj = {
+        "key1": "value1",
+        "key2": "value2",
+    }
+```
+### 10.2 对象中的使用
+声明一个新的对象： `let obj = {}`
+
+### 10.3 属性
+在Javascript中，一个对象的属性（key）可以加上''或者""包起来，也可以不写引号
+
+### 10.4 对象的crud操作
+- 查找`对象['属性'] / 对象.属性`实现
+- 修改`对象['属性'] = newValue / 对象.属性 = newValue`
+- 增加`对象['新属性'] = value / 对象.新属性 = value`
+- 删除`delete 对象['属性'] / delete 对象.属性`
+
+前者都是pythonn的写法
+
+### 10.5 对象的方法
+使用匿名函数：`testFn: function(){}`，假设这个方法在某个对象中，调用这个方法的方式为`对象.testFn()`，同样，也可以传递方法。和python很相似。
+
+### 10.6 遍历对象
+和python类似
+```javascript
+for(let k in obj){
+    console.log(k)
+    console.log(obj[k])
+    }
+```
+当然也可以遍历数组，但是需要注意的是，和python不一样，k是索引的字符
+```javascript
+for (let k in arr){
+        console.log(k)
+        console.log(arr[k])
+    }
+```
+### 10.7 内置对象
+如`document.write(), document.log()`等，此外还有`Math`对象，其中有一系列的方法，这个和python就很像了，去参考文档去找找就好了，常用的一些:
+- random，随机数抽取，返回包括0，不包括1的值
+- ceil向上取整
+- floor向下取整
+- round四舍五入
+- 三角运算，指数运算，等都有
+
+对象是共享内存空间的，比如说`a=b`,修改了b的属性，则a中对应属性的值也发生改变
