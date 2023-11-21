@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        测试文本
+    </div>
+
+    <ul>
+        <li>猫</li>
+        <li>狗</li>
+    </ul>
+
+    <script>
+        const box_object = document.querySelector('div.box')
+        box_object.innerHTML = '手动修改测试文本'
+        // alert(box_object.innerHTML)
+
+        const li_list = document.querySelectorAll('ul li')
+        for (let i = 0; i<li_list.length; i++){
+            li_list[i].innerHTML = `修改之后的${li_list[i].innerHTML}`
+        }
+    </script>
+
+    <img src="../../imgs/cat.png">
+    <button onclick="modify()">修改图片</button>
+    <script>
+        function modify(){
+            const img = document.querySelector('img')
+            img.src =  "../../imgs/fox.png"
+        }
+    </script>
+</body>
+</html>
