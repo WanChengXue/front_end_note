@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="box">
-        测试文本
-    </div>
-
     <ul>
         <li>猫</li>
         <li>狗</li>
@@ -33,6 +29,33 @@
             const img = document.querySelector('img')
             img.src =  "../../imgs/fox.png"
         }
+    </script>
+
+
+    <input type="text" value="一个大韭菜">
+    <script>
+        const uname = document.querySelector('input')
+        uname.value = "我不想亏钱了"
+    </script>
+
+    <br>
+    测试一下radio
+    <input class = 'input_radio' type="radio" checked>
+    <script>
+        const input_radio = docuement.querySelector('.input_radio')
+        input_radio.disabled = true
+    </script>
+
+    <br>
+    <p>测试一下自定义属性</p>
+    <div data-id="1">1</div>
+    <div data-id="2">2</div>
+    <div data-id="3">3</div>
+    <div data-id="4">4</div>
+    <div data-id="5">5</div>
+    <script>
+        const one = document.querySelector("div")
+        one.dataset.id = "modify"
     </script>
 </body>
 </html>

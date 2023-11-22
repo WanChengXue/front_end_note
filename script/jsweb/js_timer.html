@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea>
+        一段测试的文本
+    </textarea>
+    <button class="btn" disabled>我已经阅读协议(5)</button>
+    <script>
+        const btn = document.querySelector('.btn')
+        let i = 5
+        let timer = setInterval(function(){
+            i --
+            btn.innerHTML = `我已经阅读协议${i}`
+            if (i==0){
+                btn.innerHTML = '同意'
+                btn.disabled = false
+                clearInterval(timer)
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
