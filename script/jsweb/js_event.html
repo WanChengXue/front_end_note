@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+    }
+</style>
+<body>
+    <div>
+        测试文本
+    </div>
+
+
+    <input type="text">
+
+
+    <script>
+        div_box = document.querySelector('div')
+        div_box.addEventListener(
+            'mouseenter',
+            function(){
+                // console.log("来了")
+                alert("来了")
+            }
+        )
+        div_box.addEventListener(
+            'mouseleave',
+            function(){
+                // console.log("走了")
+                alert("走了")
+
+            }
+        )
+
+
+        const input_box = document.querySelector('input')
+        input_box.addEventListener(
+            'keydown', function(){
+                console.log(input_box.value)
+            }
+        )
+    </script>
+    <br>
+    <button>
+        raw value
+    </button>
+
+    <script>
+        let count = 0
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function(e){
+            count += 1
+            this.innerHTML = `current count value is ${count}`
+        })
+    </script>
+
+    <div class="table-nav">
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        const table_nav = document.querySelector(".table-nav ul")
+        console.log(table_nav[0])
+        table_nav.innerHTML += `<li>test</li>`
+        table_nav.innerHTML += `<li>hello</li>`
+    </script>
+</body>
+</html>
