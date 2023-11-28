@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <labe>
+    <input type="checkbox", id="all_check">
+    全选框
+    </labe>
+
+
+    <ul>
+        <li>
+            <label>
+                <input type="checkbox" class="sub_box"> 选择1
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" class="sub_box"> 选择2
+            </label>
+        </li>
+    </ul>
+    <script>
+        const total_check = document.querySelector("#all_check")
+        total_check.addEventListener('click', function(){
+            ul_check  = document.querySelectorAll(".sub_box")
+            for (let i= 0; i < ul_check.length; i++){
+                ul_check[i].checked = this.checked
+            }
+        })
+    </script>
+</body>
+</html>
