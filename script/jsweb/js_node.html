@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li id="first">第一个</li>
+        <li>第二个</li>
+        <li>第三个</li>
+    </ul>
+    <script>
+        const test_li = document.querySelector("#first")
+        const parent_node = test_li.parentNode
+        console.log(parent_node)
+
+        const children = parent_node.children
+        console.log(children)
+
+        console.log(test_li.nextElementSibling)
+    </script>
+
+    <h3>增加节点</h3>
+    <script>
+        const new_li = document.createElement('li')
+        new_li.innerHTML = '我是新创建出来的li'
+        const test_ul = document.querySelector('ul')
+        test_ul.appendChild(new_li)
+        const first_li = document.createElement('li')
+        first_li.innerHTML = '我是需要放到最前面的li'
+        test_ul.insertBefore(first_li, test_ul.children[0])
+    </script>
+
+    <h4>clone测试</h4>
+    <script>
+        const clone_li = test_ul.children[0].cloneNode(true)
+        test_ul.appendChild(clone_li)
+        console.log(location.search)
+        console.log(location.hash)
+        console.log(navigator)
+    </script>
+
+
+</body>
+</html>
