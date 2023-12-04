@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script>
+        axios({
+            method: 'get',
+            url: 'http://hmajax.itheima.net/api/area',
+            params: {
+                pname: '江西省',
+                cname: '南昌市'
+            }
+        }).then(result => {
+            console.log(result)
+            const p = document.querySelector('p')
+            p.innerHTML = result.data.list.join('<br>')
+        })
+    </script>
+
+
+    <button>注册</button>
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', () => {
+            axios({
+                method: 'post',
+                url: 'http://hmajax.itheima.net/api/login',
+                data:{
+                    uname: "qianshanluoxue",
+                    password:"test1234"
+                }
+            }).then(success => {
+                console.log(success)
+            }).catch(error => {
+                console.log(error)
+            })
+        })
+    </script>
+
+
+    <form action="javascript:;">
+        <input type="text" name="uname">
+        <br>
+        <input type="text" name="pwd">
+        <br>
+        <input type="button" class="btn", value="提交">
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/form-serialize@0.7.2/index.min.js"></script>
+    <script>
+        document.querySelector('.btn').addEventListener('click', ()=>{
+            const form = document.querySelector('form')
+            console.log(serialize(form, {hash: true, empty: true}))
+        })
+
+    </script>
+</body>
+</html>
