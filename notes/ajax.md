@@ -75,3 +75,11 @@ axios(
 
 ## 1.4 form-serialize插件
 `serialize(form, {hash: true, empty: true})`，后面的字典表示配置，hash设置为true则为js对象，hash配置为false则为查询字符串；empty为true则表示获取空值，false为不获取空值
+
+## 1.5 Bootstrap弹框
+功能：不离开当前页面，显示单独内容，供用户操作。步骤：
+- 引入bootstrap.css和bootstrap.js
+- 准备弹框标签，确认结构
+- 通过自定义属性，控制弹框的显示和隐藏
+
+bootstrap的modal弹框，添加modal类名，默认隐藏。因此需要自定义属性，控制弹框的显示和隐藏，使用`new bootstrap.Modal(选择器)`可以得到bootstrap对象，可以使用show和hide方法进行显示和隐藏
